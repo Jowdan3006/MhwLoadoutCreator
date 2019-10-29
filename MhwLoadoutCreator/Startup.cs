@@ -55,10 +55,14 @@ namespace MhwLoadoutCreator
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-            
-            app.UseMvc(routes =>
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
             });
 
             app.UseSpa(spa =>

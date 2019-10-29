@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {}
+    "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {
+    "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
+        "projectUniqueName": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
         "projectName": "MhwLoadoutCreator.MhwDbApiAccess",
-        "projectPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
+        "projectPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
         "packagesPath": "C:\\Users\\jordan.ambridge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\obj\\",
+        "outputPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
-                "projectPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj"
+              "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
+                "projectPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
+    "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
+        "projectUniqueName": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
         "projectName": "MhwLoadoutCreator.Models",
-        "projectPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
+        "projectPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
         "packagesPath": "C:\\Users\\jordan.ambridge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\obj\\",
+        "outputPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

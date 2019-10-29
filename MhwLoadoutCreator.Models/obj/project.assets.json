@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
+      "projectUniqueName": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
       "projectName": "MhwLoadoutCreator.Models",
-      "projectPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
+      "projectPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
       "packagesPath": "C:\\Users\\jordan.ambridge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jordan.ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\obj\\",
+      "outputPath": "C:\\Users\\jordan.ambridge\\Documents\\GitHub\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
