@@ -1,12 +1,12 @@
-﻿using MhwLoadoutCreator.Models.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MhwLoadoutCreator.Models
 {
-    public class Monsters : IMonsters
+    public class Monsters
     {
-        public IEnumerable<IMonster> MonsterList { get; set; }
+        public IEnumerable<Monster> MonsterList { get; set; }
+        public DateTime DateInit { get; set; }
     }
 }

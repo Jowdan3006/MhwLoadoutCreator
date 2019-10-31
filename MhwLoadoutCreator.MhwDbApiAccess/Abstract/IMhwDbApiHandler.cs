@@ -1,4 +1,4 @@
-﻿using MhwLoadoutCreator.Models.Abstract;
+﻿using MhwLoadoutCreator.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.Abstract
 {
     public interface IMhwDbApiHandler
     {
-        Task<IMonsters> Get();
-        Task<IMonster> Get(int id);
+        Task<Monsters> Get();
+        Task<Monster> Get(int id);
     }
 }

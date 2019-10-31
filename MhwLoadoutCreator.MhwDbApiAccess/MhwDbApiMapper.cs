@@ -1,6 +1,5 @@
 ﻿using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
 using MhwLoadoutCreator.Models;
-using MhwLoadoutCreator.Models.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,19 +9,24 @@ namespace MhwLoadoutCreator.MhwDbApiAccess
 {
     public class MhwDbApiMapper : IMhwDbApiMapper
     {
-        public IMonsters Map(IMonstersApi monstersApi)
+        public Monsters Map(MonstersApi monstersApi)
         {
-            IMonsters monsters = new Monsters()
+            Monsters monsters = new Monsters()
             {
-                MonsterList = monstersApi.MonsterList.Select(monster => new Monster() { Name = monster.Name }).ToArray()
+                MonsterList = monstersApi.MonsterList.Select(monster => new Monster()
+                {
+                    Name = monster.Name,
+                    Id = (int)monster.Id
+                }
+                ).ToArray()
             };
 
             return monsters;
         }
 
-        public IMonster Map(MonsterApi monsterApi)
+        public Monster Map(Monsters monsters, int id)
         {
-            throw new NotImplementedException();
+            return monsters.MonsterList.Select(monster => monster)
         }
     }
 }

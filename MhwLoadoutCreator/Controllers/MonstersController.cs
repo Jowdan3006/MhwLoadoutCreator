@@ -1,38 +1,33 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
 using MhwLoadoutCreator.Models;
-using MhwLoadoutCreator.Models.Abstract;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace MhwLoadoutCreator.Controllers
 {
-    [ApiController]
-    public class WeatherForecastController : ControllerBase
+    [Route("api/[controller]")]
+    public class MonstersController : Controller
     {
-
         private IMhwDbApiHandler _mhwDbApiHandler { get; set; }
 
-        public WeatherForecastController(IMhwDbApiHandler mhwDbApiHandler)
+        public MonstersController(IMhwDbApiHandler mhwDbApiHandler)
         {
             _mhwDbApiHandler = mhwDbApiHandler;
         }
 
         [HttpGet]
-        public async Task<IMonsters> Get()
+        public async Task<Monsters> Get()
         {
             return await _mhwDbApiHandler.Get();
         }
 
-        [HttpPost]
-        public int Post(int monsterId)
+        [HttpGet("{id}")]
+        public async Task<Monster> Get(int id)
         {
-            return monsterId;
-
-            //return await _mhwDbApiHandler.Get(id);
+            return await _mhwDbApiHandler.Get(id);
         }
     }
 }

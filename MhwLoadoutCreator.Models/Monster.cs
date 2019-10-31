@@ -1,10 +1,10 @@
-﻿using MhwLoadoutCreator.Models.Abstract;
-using System;
+﻿using System;
 
 namespace MhwLoadoutCreator.Models
 {
-    public class Monster : IMonster
+    public class Monster
     {
         public string Name { get; set; }
+        public int Id { get; set; }
     }
 }

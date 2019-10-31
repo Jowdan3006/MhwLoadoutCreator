@@ -1,8 +1,0 @@
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\bin\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.deps.json
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\bin\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.dll
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\bin\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.pdb
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\obj\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.csprojAssemblyReference.cache
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\obj\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.AssemblyInfoInputs.cache
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\obj\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.AssemblyInfo.cs
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\obj\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.dll
-C:\Users\jordan.ambridge\source\repos\MhwLoadoutCreator\MhwLoadoutCreator.Models\obj\Debug\netcoreapp3.0\MhwLoadoutCreator.Models.pdb

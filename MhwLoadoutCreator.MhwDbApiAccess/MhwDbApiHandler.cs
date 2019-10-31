@@ -1,7 +1,5 @@
 ﻿using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
 using MhwLoadoutCreator.Models;
-using MhwLoadoutCreator.Models.Abstract;
-using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,24 +10,35 @@ namespace MhwLoadoutCreator.MhwDbApiAccess
     {
         private HttpClient _httpClient { get; set; }
         private IMhwDbApiMapper _mhwDbApiMapper { get; set; }
-        public object IMonsters { get; private set; }
+        private Monsters _monsters { get; set; }
+        private DateTime _dateInit { get; set; }
 
         public MhwDbApiHandler(HttpClient httpClient, IMhwDbApiMapper mhwDbApiMapper)
         {
             _httpClient = httpClient;
             _mhwDbApiMapper = mhwDbApiMapper;
+            _dateInit = DateTime.Now;
         }
 
-        public async Task<IMonsters> Get()
+        public async Task<Monsters> Get()
         {
-            var response = await _httpClient.GetStringAsync("monsters");
-            IMonstersApi result = new MonstersApi() { MonsterList = MonsterApi.FromJson(response) };
-            return _mhwDbApiMapper.Map(result);
+            if (_monsters == null || _dateInit.AddDays(7) < DateTime.Now)
+            {
+                var response = await _httpClient.GetStringAsync("monsters");
+                MonstersApi result = new MonstersApi() { MonsterList = MonsterApi.FromJson(response) };
+                _monsters = _mhwDbApiMapper.Map(result);
+                _monsters.DateInit = _dateInit;
+            }
+            return _monsters;
         }
 
-        public async Task<IMonster> Get(int id)
+        public async Task<Monster> Get(int id)
         {
-            throw new NotImplementedException();
+            if (_monsters == null || _dateInit.AddDays(7) < DateTime.Now)
+            {
+                return _mhwDbApiMapper.Map(await Get(), id);
+            }
+            return _mhwDbApiMapper.Map(_monsters, id);
         }
     }
 }
