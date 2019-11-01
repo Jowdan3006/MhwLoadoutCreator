@@ -26,7 +26,8 @@ namespace MhwLoadoutCreator.MhwDbApiAccess
 
         public Monster Map(Monsters monsters, int id)
         {
-            return monsters.MonsterList.Select(monster => monster)
+            throw new NotImplementedException();
+            //return monsters.MonsterList.Select(monster => monster);
         }
     }
 }

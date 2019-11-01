@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {}
+    "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {
+    "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
+        "projectUniqueName": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
         "projectName": "MhwLoadoutCreator.MhwDbApiAccess",
-        "projectPath": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
-        "packagesPath": "C:\\Users\\Jordan.Ambridge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\obj\\",
+        "projectPath": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\MhwLoadoutCreator.MhwDbApiAccess.csproj",
+        "packagesPath": "C:\\Users\\jordan.ambridge\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.MhwDbApiAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jordan.Ambridge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jordan.ambridge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
-                "projectPath": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj"
+              "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
+                "projectPath": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj"
               }
             }
           }
@@ -57,27 +57,33 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
+    "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
+        "projectUniqueName": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
         "projectName": "MhwLoadoutCreator.Models",
-        "projectPath": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
-        "packagesPath": "C:\\Users\\Jordan.Ambridge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jordan.Ambridge\\source\\repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\obj\\",
+        "projectPath": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\MhwLoadoutCreator.Models.csproj",
+        "packagesPath": "C:\\Users\\jordan.ambridge\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub Repos\\MhwLoadoutCreator\\MhwLoadoutCreator.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jordan.Ambridge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jordan.ambridge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,10 +119,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
