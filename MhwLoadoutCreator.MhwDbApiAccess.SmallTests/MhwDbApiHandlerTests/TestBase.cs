@@ -18,12 +18,13 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
     public class TestBase : AssemblyTestBase
     {
         protected HttpClient HttpClient;
-        protected MyHttpMessageHandler HttpMessageHandler;
         protected IMhwDbApiMapper MhwDbApiMapper;
+        protected IMhwDbApiClient MhwDbApiClient;
 
-        protected MonstersApi MonstersApi;
+        protected IEnumerable<MonsterApi> MonstersApi;
         protected MonsterApi MonsterApi;
         protected Monsters Monsters;
+        protected Monster Monster;
 
         protected long MonsterId;
         public static string MonstersApiJson;
@@ -31,47 +32,41 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
         [SetUp]
         public void SetUp()
         {
-            HttpMessageHandler = new MyHttpMessageHandler();
-            HttpClient = new HttpClient(HttpMessageHandler)
-            {
-                BaseAddress = Fixture.Create<Uri>()
-            };
+            MhwDbApiClient = Substitute.For<IMhwDbApiClient>();
             MhwDbApiMapper = Substitute.For<IMhwDbApiMapper>();
 
             MonsterId = Fixture.Create<long>();
             MonsterApi = Fixture.Build<MonsterApi>()
                         .With(x => x.Id, MonsterId)
                         .Create();
-            MonstersApi = Fixture.Build<MonstersApi>()
-                .With(x => x.MonsterList, new List<MonsterApi>()
+            MonstersApi = new List<MonsterApi>()
                 {
                     Fixture.Create<MonsterApi>(),
                     Fixture.Create<MonsterApi>(),
                     MonsterApi
+                };
+
+            Monster = Fixture.Build<Monster>()
+                        .With(x => x.Id, MonsterId)
+                        .Create();
+            Monsters = Fixture.Build<Monsters>()
+                .With(x => x.MonsterList, new List<Monster>()
+                {
+                    Fixture.Create<Monster>(),
+                    Fixture.Create<Monster>(),
+                    Monster
                 })
                 .Create();
 
-            Monsters = Fixture.Create<Monsters>();
-            MonstersApiJson = Serialize.ToJson(MonstersApi.MonsterList.ToArray());
-            MhwDbApiMapper.Map(MonstersApi).Returns(Monsters);
+            MonstersApiJson = Serialize.ToJson(MonstersApi.ToArray());
+            MhwDbApiClient.Get("monsters").Returns(MonstersApiJson);
+            MhwDbApiMapper.Map(Arg.Any<List<MonsterApi>>()).Returns(Monsters);
         }
 
 
-        public MhwDbApiHandler CreateSut() => new MhwDbApiHandler(HttpClient, MhwDbApiMapper);
+        public MhwDbApiHandler CreateSut() => new MhwDbApiHandler(MhwDbApiClient, MhwDbApiMapper);
     }
 
-    public class MyHttpMessageHandler : HttpMessageHandler
-    {
-        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-        {
-            var reponse = new HttpResponseMessage()
-            {
-                StatusCode = HttpStatusCode.OK,
-                Content = new StringContent(TestBase.MonstersApiJson)
-            };
 
-            return Task.FromResult(reponse);
-        }
-    }
 
 }

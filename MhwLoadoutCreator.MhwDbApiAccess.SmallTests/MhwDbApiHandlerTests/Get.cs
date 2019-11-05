@@ -10,7 +10,7 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
     public class Get : TestBase
     {
         [Test]
-        public async Task Get_WithNoParams_ReturnsValidMonstersApi()
+        public async Task Get_WithNoParams_ReturnsValidMonsters()
         {
             //arrange
             var sut = CreateSut();
@@ -19,7 +19,21 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
             var result = await sut.Get();
 
             //assert
-            result.MonsterList.Should().BeEquivalentTo(MonstersApi);
+            result.Should().BeEquivalentTo(Monsters);
+        }
+
+        [Test]
+        public async Task Get_WithId_ReturnsValidMonster()
+        {
+            //arrange
+            var sut = CreateSut();
+
+
+            //act
+            var result = await sut.Get(MonsterId);
+
+            //assert
+            result.Should().BeEquivalentTo(Monster);
         }
     }
 }

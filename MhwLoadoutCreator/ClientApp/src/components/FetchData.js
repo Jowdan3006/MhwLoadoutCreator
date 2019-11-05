@@ -6,8 +6,8 @@ export class FetchData extends Component {
   constructor (props) {
     super(props);
     this.state = { forecasts: [], loading: true };
-
-    fetch('api/Monsters/1')
+    let ranNum = Math.ceil(Math.random() * 30)
+    fetch(`api/Monsters/${ranNum}`)
         .then(response => response.json())
         .then(data => console.log(data));
   }

@@ -9,25 +9,18 @@ namespace MhwLoadoutCreator.MhwDbApiAccess
 {
     public class MhwDbApiMapper : IMhwDbApiMapper
     {
-        public Monsters Map(MonstersApi monstersApi)
+        public Monsters Map(IEnumerable<MonsterApi> monsterApi)
         {
             Monsters monsters = new Monsters()
             {
-                MonsterList = monstersApi.MonsterList.Select(monster => new Monster()
+                MonsterList = monsterApi.Select(monster => new Monster()
                 {
                     Name = monster.Name,
-                    Id = (int)monster.Id
+                    Id = monster.Id
                 }
                 ).ToArray()
             };
-
             return monsters;
-        }
-
-        public Monster Map(Monsters monsters, int id)
-        {
-            throw new NotImplementedException();
-            //return monsters.MonsterList.Select(monster => monster);
         }
     }
 }

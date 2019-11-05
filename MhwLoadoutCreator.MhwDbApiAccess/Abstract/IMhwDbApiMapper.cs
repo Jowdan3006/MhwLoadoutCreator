@@ -7,7 +7,6 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.Abstract
 {
     public interface IMhwDbApiMapper
     {
-        Monsters Map(MonstersApi monstersApi);
-        Monster Map(Monsters monsters, int id);
+        Monsters Map(IEnumerable<MonsterApi> monsterApi);
     }
 }

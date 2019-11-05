@@ -9,6 +9,6 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.Abstract
     public interface IMhwDbApiHandler
     {
         Task<Monsters> Get();
-        Task<Monster> Get(int id);
+        Task<Monster> Get(long id);
     }
 }

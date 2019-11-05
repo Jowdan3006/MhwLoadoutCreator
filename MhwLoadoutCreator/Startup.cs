@@ -29,6 +29,7 @@ namespace MhwLoadoutCreator
             services.AddSingleton<HttpClient>(new HttpClient() { BaseAddress = new Uri("http://mhw-db.com/") });
             services.AddSingleton<IMhwDbApiHandler, MhwDbApiHandler>();
             services.AddSingleton<IMhwDbApiMapper, MhwDbApiMapper>();
+            services.AddSingleton<IMhwDbApiClient, MhwDbApiClient>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
