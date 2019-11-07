@@ -1,5 +1,7 @@
 ﻿using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
 using MhwLoadoutCreator.Models;
+using MhwLoadoutCreator.Models.Monster;
+using MhwLoadoutCreator.Models.Monster.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace MhwLoadoutCreator.MhwDbApiAccess
 {
-    public class MhwDbApiHandler : IMhwDbApiHandler
+    public class MhwDbApiMonsterHandler : IMhwDbApiHandler<Monster, Monsters>
     {
         private IMhwDbApiClient _mhwDbApiClient { get; set; }
         private IMhwDbApiMapper _mhwDbApiMapper { get; set; }
         private Monsters _monsters { get; set; }
         private DateTime _dateInit { get; set; }
 
-        public MhwDbApiHandler(IMhwDbApiClient mhwDbApiClient, IMhwDbApiMapper mhwDbApiMapper)
+        public MhwDbApiMonsterHandler(IMhwDbApiClient mhwDbApiClient, IMhwDbApiMapper mhwDbApiMapper)
         {
             _mhwDbApiClient = mhwDbApiClient;
             _mhwDbApiMapper = mhwDbApiMapper;
@@ -35,7 +37,7 @@ namespace MhwLoadoutCreator.MhwDbApiAccess
             return _monsters;
         }
 
-        public async Task<Monster> Get(long id)
+        public async Task<Monster> Get(int id)
         {
             if (_monsters == null || DateTime.Compare(_dateInit.AddDays(7), DateTime.Now) < 0)
             {

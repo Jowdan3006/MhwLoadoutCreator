@@ -7,7 +7,7 @@ export class FetchData extends Component {
     super(props);
     this.state = { forecasts: [], loading: true };
     let ranNum = Math.ceil(Math.random() * 30)
-    fetch(`api/Monsters/${ranNum}`)
+    fetch(`api/Armor/Equip?e=12,23,15,12,12`)
         .then(response => response.json())
         .then(data => console.log(data));
   }

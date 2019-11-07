@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
+namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiMonsterHandlerTests
 {
     public class Get : TestBase
     {

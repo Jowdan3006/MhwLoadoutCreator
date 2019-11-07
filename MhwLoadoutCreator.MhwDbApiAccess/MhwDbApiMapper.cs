@@ -1,9 +1,12 @@
 ﻿using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
-using MhwLoadoutCreator.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using MhwLoadoutCreator.Models.Monster.Api;
+using MhwLoadoutCreator.Models.Monster;
+using MhwLoadoutCreator.Models.Armor;
+using MhwLoadoutCreator.Models.Armor.Api;
 
 namespace MhwLoadoutCreator.MhwDbApiAccess
 {
@@ -16,11 +19,34 @@ namespace MhwLoadoutCreator.MhwDbApiAccess
                 MonsterList = monsterApi.Select(monster => new Monster()
                 {
                     Name = monster.Name,
-                    Id = monster.Id
+                    Id = monster.Id.Value
                 }
                 ).ToArray()
             };
             return monsters;
+        }
+
+        public Armors Map(IEnumerable<ArmorApi> armorApi)
+        {
+            Armors armors = new Armors()
+            {
+                ArmorList = armorApi.Select(armor => new Armor()
+                {
+                    Id = armor.Id.Value,
+                    Name = armor.Name,
+                    Rank = armor.Rank,
+                    Rarity = armor.Rarity.Value,
+                    Type = armor.Type,
+                    Defense = new Models.Armor.Defense()
+                    {
+                        Base = armor.Defense.Base.Value,
+                        Max = armor.Defense.Max.Value,
+                        Augmented = armor.Defense.Augmented.Value
+                    }
+
+                })
+            };
+            return armors;
         }
     }
 }

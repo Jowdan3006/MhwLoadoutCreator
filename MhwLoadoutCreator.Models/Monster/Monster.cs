@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace MhwLoadoutCreator.Models
+namespace MhwLoadoutCreator.Models.Monster
 {
     public class Monster
     {
         public string Name { get; set; }
-        public long Id { get; set; }
+        public int Id { get; set; }
     }
 }

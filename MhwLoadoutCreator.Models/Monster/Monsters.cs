@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MhwLoadoutCreator.Models
+namespace MhwLoadoutCreator.Models.Monster
 {
     public class Monsters
     {

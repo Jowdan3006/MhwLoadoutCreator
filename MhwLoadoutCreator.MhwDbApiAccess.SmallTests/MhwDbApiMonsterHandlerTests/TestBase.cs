@@ -1,41 +1,28 @@
-﻿using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
-using NSubstitute;
+﻿using NSubstitute;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using AutoFixture;
-using MhwLoadoutCreator.Models;
-using System.Net;
-using System.Threading;
-using Newtonsoft.Json;
+using MhwLoadoutCreator.Models.Monster;
 using System.Linq;
+using MhwLoadoutCreator.Models.Monster.Api;
 
-namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
+namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiMonsterHandlerTests
 {
     public class TestBase : AssemblyTestBase
     {
-        protected HttpClient HttpClient;
-        protected IMhwDbApiMapper MhwDbApiMapper;
-        protected IMhwDbApiClient MhwDbApiClient;
-
         protected IEnumerable<MonsterApi> MonstersApi;
         protected MonsterApi MonsterApi;
         protected Monsters Monsters;
         protected Monster Monster;
 
-        protected long MonsterId;
+        protected int MonsterId;
         public static string MonstersApiJson;
 
         [SetUp]
         public void SetUp()
         {
-            MhwDbApiClient = Substitute.For<IMhwDbApiClient>();
-            MhwDbApiMapper = Substitute.For<IMhwDbApiMapper>();
-
-            MonsterId = Fixture.Create<long>();
+            MonsterId = Fixture.Create<int>();
             MonsterApi = Fixture.Build<MonsterApi>()
                         .With(x => x.Id, MonsterId)
                         .Create();
@@ -58,13 +45,13 @@ namespace MhwLoadoutCreator.MhwDbApiAccess.SmallTests.MhwDbApiHandlerTests
                 })
                 .Create();
 
-            MonstersApiJson = Serialize.ToJson(MonstersApi.ToArray());
+            MonstersApiJson = Serialize.ToJson(MonstersApi.ToList());
             MhwDbApiClient.Get("monsters").Returns(MonstersApiJson);
             MhwDbApiMapper.Map(Arg.Any<List<MonsterApi>>()).Returns(Monsters);
         }
 
 
-        public MhwDbApiHandler CreateSut() => new MhwDbApiHandler(MhwDbApiClient, MhwDbApiMapper);
+        public MhwDbApiMonsterHandler CreateSut() => new MhwDbApiMonsterHandler(MhwDbApiClient, MhwDbApiMapper);
     }
 
 

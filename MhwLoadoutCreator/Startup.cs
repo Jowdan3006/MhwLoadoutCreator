@@ -1,5 +1,7 @@
 using MhwLoadoutCreator.MhwDbApiAccess;
 using MhwLoadoutCreator.MhwDbApiAccess.Abstract;
+using MhwLoadoutCreator.Models.Armor;
+using MhwLoadoutCreator.Models.Monster;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
+using System.Web.Mvc;
 
 namespace MhwLoadoutCreator
 {
@@ -27,7 +30,8 @@ namespace MhwLoadoutCreator
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSingleton<HttpClient>(new HttpClient() { BaseAddress = new Uri("http://mhw-db.com/") });
-            services.AddSingleton<IMhwDbApiHandler, MhwDbApiHandler>();
+            services.AddSingleton<IMhwDbApiHandler<Monster, Monsters>, MhwDbApiMonsterHandler>();
+            services.AddSingleton<IMhwDbApiHandler<Armor, Armors>, MhwDbApiArmorHandler>();
             services.AddSingleton<IMhwDbApiMapper, MhwDbApiMapper>();
             services.AddSingleton<IMhwDbApiClient, MhwDbApiClient>();
 
@@ -60,7 +64,9 @@ namespace MhwLoadoutCreator
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "{controller}/{action}/{id}",
+                    defaults: new { controller = "Armor", action = "Index", id = UrlParameter.Optional }
+                );
             });
 
             app.UseSpa(spa =>
